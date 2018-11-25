@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 23</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var correcto=false;
+		var dia=0;
+		var mes=0;
+		var anio=0;  //Guarda el año actual
+		var anios=0; //Guarda los años que hay que calcular
+		//Conseguimos el día
+		dia=parseInt(prompt("Introduce el día (d)"));
+		while (!correcto)
+			{
+				if((dia>0)&&(dia<=31))
+				{
+					correcto=true;
+				}
+				else
+				{
+					dia=prompt("Introduce el día (d)");
+				}
+			}
+
+		//Conseguimos el mes
+		correcto=false;
+		mes=parseInt(prompt("Introduce el mes (m)"));
+		while (!correcto)
+			{
+				if((mes>0)&&(mes<=12))
+				{
+					correcto=true;
+				}
+				else
+				{
+					mes=parseInt(prompt("Introduce el mes (m)"));
+				}
+			}
+		//Conseguimos el año
+		correcto=false;
+	    do
+	    {
+	    	anio=parseInt(prompt("Introduce el año (aaaa)"));
+	    	if((anio>=0)&&(anio<=2019))
+	    	{
+	    		correcto=true;
+	    	}
+	    }
+	    while(!correcto);
+	  //Conseguimos los años a calcular
+	  anios=parseInt(prompt("Introduce los años a calcular"));
+      var sDate=mes.toString()+"/"+dia.toString()+"/"+anio.toString();
+      
+	  var fecha= new Date(sDate);
+	</script>
+
+	<h1>Manejando objeto Date...</h1>
+
+    <script>
+    	document.write("<p>Ha introducido:"+fecha.toString()+"</p>");
+    </script>   
+	<script>
+		document.write("<p>Han pasado "+Date.now()+" desde las 00:00:00 de 1970</p>");
+	</script>
+	<table border="1">
+		<tr>
+			<td>El año...</td>
+			<script >
+				for(var cont=1;cont<=anios;cont++)
+				{
+					document.write("<td>"+(fecha.getFullYear()-cont).toString()+"</td>");
+				}
+			</script>
+		</tr>
+		<tr>
+			<td>Era un...</td>
+			<script >
+				var dias=["Lunes","Martes","Miercoles","Jueves","Viernes","sabado","domingo"];
+				var dia1=-1;
+				for(var cont=1;cont<=anios;cont++)
+				{
+					fecha.setFullYear(fecha.getFullYear()-1);
+					dia1= fecha.getDay();
+					document.write("<td>"+dias[dia1]+"</td>");
+				}
+			</script>
+		</tr>
+	</table>
+<h1>HECHO...</h1>
+</body>
+</html>

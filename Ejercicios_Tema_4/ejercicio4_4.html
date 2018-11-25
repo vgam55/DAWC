@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 4 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 4.	Crea un script que defina un objeto llamado producto_alimenticio. Este objeto debe presentar las propiedades codigo, nombre y precio además del método imprimeDatos, el cual escribe por pantalla los valores de sus propiedades. Posteriormente escribe tres instancias de este objeto y guárdalas en un array. Muestra los datos por pantalla utilizando un bucle for.-->
+	<script>
+	 function producto_alimenticio(codigo,nombre,precio)
+	  	{
+	  		this.codigo= codigo;
+	  		this.nombre= nombre;
+	  		this.precio= precio;
+	  		this.imprimeDatos= function()
+	  		{
+	  		  	document.write("<p>El articulo con codigo "+this.codigo+" de nombre "+this.nombre+" cuesta "+this.precio+" euros.</p>");	  		
+	  		}
+	  	}
+	  	var p1=new producto_alimenticio(1,"horchata de chufa",33);
+	  	var p2=new producto_alimenticio(2,"fartons",17);
+	  	var p3=new producto_alimenticio(3,"Naranas de la China",5);
+	  	var p4=new producto_alimenticio(4,"Sardinas",105);
+	  	p1.imprimeDatos();
+	  	p2.imprimeDatos();
+	  	p3.imprimeDatos();
+	  	p4.imprimeDatos();
+	  	/*var producto_alimenticio = new Object();
+	  	producto_alimenticio.codigo="A001";
+	  	producto_alimenticio.nombre="Horchata de chufa";
+	  	producto_alimenticio.precio=25;
+	  	producto_alimenticio.imprimeDatos=function()
+	  	{
+	  		
+	  		document.write("<p>El articulo con codigo "+this.codigo+" de nombre "+this.nombre+" cuesta "+this.precio+" euros.</p>");
+	  		alert("aaa");
+	  	}
+	  	var ins1=new Array();
+	  	ins1[0]=producto_alimenticio;
+	  	ins1[1]=producto_alimenticio;
+	  	ins1[2]=producto_alimenticio;
+	  	ins1[3]=producto_alimenticio;
+	  	for(var i=0; i<4;i++)
+	  	{
+	  		ins1[i].imprimeDatos();
+	  	}*/
+	</script>
+</body>
+</html>

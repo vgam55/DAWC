@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 8 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 8. Añadir, al final del ejercicio anterior, un enlace que de la posibilidad de introducir un nombre por pantalla y conocer su edad si existe y si no un mensaje de advertencia.-->	
+	<script>
+		var nombres=["yo", "tú", "él", "nosotros", "vosotros","ellos"];
+		var edades=[18, 19, 20, 21, 22, 23, 24];
+		document.write("<p>");
+
+		function escribirNombreEdad(nombres1, edades1)
+		{
+			for(cont=0;cont<nombres.length;cont++)
+			{
+				document.write(" Nombre: "+nombres1[cont]+" Edad: "+edades1[cont]+" <br>");
+			}
+			document.write("</p>");
+		}
+
+		function mediaEdad(edades1)
+		{
+			var sumatorio=0;    //Guarda la suma de las edades para luego hacer la media
+			var cont; 			//Guarda el número de elementos final del array-1
+			for(cont=0;cont<edades1.length;cont++)
+			{
+				sumatorio=sumatorio+edades1[cont];
+			}
+			sumatorio=sumatorio/(cont+1);
+			document.write("<p>La media de edad es "+sumatorio+"</p>");
+		}
+
+		function buscarNombre(nombre1,edad1)
+		{
+		  var nombre=prompt("Introduce el nombre que quieres buscar");
+		  var pos=nombre1.indexOf(nombre);
+		  if(pos>-1)
+		 	{ 
+		 		document.write("<p>Nombre: "+nombre1[pos]+" Edad: "+edad1[pos]);
+		 	}
+		   else
+		   {
+		   	document.write("<p>No se han encontrado coincidencias</p>");
+		   }
+		}
+	</script>
+	<button type="submit" value="Ejecutar" onclick="escribirNombreEdad(nombres, edades)">Ejecutar</button>
+	<button type="submit" value="Media de edad" onclick="mediaEdad(edades)">Enviar</button>
+	<button type="submit" onclick="buscarNombre(nombres, edades)">Buscar</button>
+</body>
+</html>

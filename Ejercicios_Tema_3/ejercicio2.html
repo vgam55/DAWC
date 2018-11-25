@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 2 Tema 3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var nomNav=  navigator.appName;//navigator.appName(); Guarda el nombre del cliente
+		var nomVer=navigator.appVersion; //Guarda la versión del cliente
+		var javaEnabled=navigator.javaEnabled;
+		var salida= "<p>Tú navegador es: "+nomNav+" en su versión: "+nomVer;
+		if(javaEnabled==true)
+		{
+			salida=salida+" y soporta Java";
+		}
+		else
+		{
+			salida=salida+" y no soporta Java"
+		}
+		salida=salida+"</p>";
+		document.write(salida+" "+javaEnabled);
+	</script>
+</body>
+</html>

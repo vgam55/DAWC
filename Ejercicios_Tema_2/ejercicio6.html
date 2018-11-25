@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 6</title>
+	<meta charset="UTF-8">
+	<script type="text/javascript" charset="utf-8" async defer>
+		var numero=Math.floor(Math.random()*10)+1;
+		var acertado=false;
+		var numOut=0;
+		var ind=1;
+		alert(numero);
+		while((ind<=5) && (acertado==false))
+		{
+			numOut=parseInt(prompt("Introduce un número"));
+			if(numero==numOut)
+			{
+				acertado=true;
+			}
+			else
+			{
+				alert("No es el número que buscamos");
+			}
+			ind++;
+		}	
+		if(acertado)
+		{
+			alert("Has acertado el número");
+		}
+	</script>  
+</head>
+<body>
+	<script>
+		document.write("<p>El número es"+numero+"</p>");
+	</script>
+</body>
+</html>

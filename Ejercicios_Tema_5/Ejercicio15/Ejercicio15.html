@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 15 del Tema 5.</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 15.	Haciendo uso del objeto select  muestra el siguiente formulario. Al pulsar sobre el botón “Enviar” se debe mostrar el valor de las opciones seleccionadas. Los valores seleccionados por defecto son: el tercero en la primera lista y el segundo en la segunda lista.-->
+	<form action="">
+		<h1>Manejando los objetos SELECT</h1>
+		<h2>Elija la opción deseada</h2>
+		<label for="procesador"></label>
+		<select name="procesador" id="procesador">
+			<option value="IMD">IMD</option>
+			<option value="CELERON">CELERON</option>
+			<option value="TIGRA">TIGRA</option>
+		</select>
+
+		<label for="SO"></label>
+		<select name="" id="SO">
+			<option value="Windows NT">Windows NT</option> 
+			<option value="Linux">Linux</option>
+			<option value="Unix">Unix</option>
+		</select>
+		<br>
+
+		<input type="submit" value="Enviar" id="btnEnviar">
+		<input type="reset" value="Limpiar">
+		<script type="text/javascript" src="selectOpc.js"></script>
+	</form>
+</body>
+</html>

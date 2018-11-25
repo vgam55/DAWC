@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 7 de JavaScript</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<script>
+		var numTel=prompt("Introduce un número de telefono de Vizcaya, Gipuzcoa o Alava");
+		var prefijo=numTel.substring(0, 3);
+		alert(prefijo);
+		if(prefijo=="945")
+		{
+			alert("El prefijo es de Alava");
+		}
+		else if(prefijo=="943")
+		{
+			alert("El prefijo es de Gipuzcoa");
+		}
+		else if (((prefijo[0]="9") && (prefijo[1]="4") && ((prefijo[2]!="3") && (prefijo[2]!="5"))))
+		{
+			alert("El prefijo es de Vizcaya");
+		}
+		else
+		{
+			alert ("Todavía no conozco ese prefijo");
+		}
+	</script>
+</body>
+</html>

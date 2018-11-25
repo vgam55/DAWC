@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 6 Tema 4</title>
+	<link rel="stylesheet" href="">
+	<!-- 6.	Crear un programa que permita introducir 10 nombres de los socios de un club (utilizar la estructura de array). Los elementos deben leerse de pantalla utilizando el método prompt(). En el mensaje de salida que permite la introducción de los nombres debe indicarse el número de elemento que se solicita. Después de introducir todos los elementos se tiene que mostrar la siguiente información por pantalla:
+a.	mostrar los nombres de los socios tal y como se han introducido
+b.	indicar el número socios que hay
+c.	mostrar el nombre de los socios ordenados por orden alfabético
+d.	mostrar el nombre de los socios en orden inverso al introducido.
+-->
+	<script>
+		var nombres=[];
+		var nombresCopy=[];
+		function duplicar(nombres1)
+		{
+			var nombresCopy1=[];
+			nombresCopy1=nombresCopy1.concat(nombres1);
+			return nombresCopy1;
+		}
+		function pedirNombres()
+		{
+			var nombres1=[];
+			for(var i=0; i<10;i++)
+			{
+				nombres1[i]=prompt("Introduce el nombre del socio "+(i+1).toString()+" de 10 ");
+			}
+			return nombres1;
+		}
+
+		//Devuelve el tamaño del array
+		function tamanio(nombres)
+		{
+			return nombres.length;
+		}
+
+		/*
+			Devuelve el contenido del array en el orden inverso al que se han introducido.
+		*/
+		function mostrarArrayInverso(nombres1)
+		{
+			return nombres1.reverse();
+		}
+
+		/*
+			Devuelve el contenido del array en forma de strng y separado por una coma
+		*/
+		function mostrarArray(nombres1)
+		{
+			return nombres1.join(", ");
+		}
+
+		// Ordena el array
+		function ordenar(nombres1)
+		{
+			return nombres1.sort();
+		}
+	</script>
+
+</head>
+	<script>
+		nombres=pedirNombres();
+		nombresCopy=duplicar(nombres);
+		document.write("<section><article>");
+		document.write("<p>La lista de los socios es: "+mostrarArray(nombres)+"</p>");
+		document.write("<p>El número de socios es: "+tamanio(nombres)+"</p>");
+		document.write("<p>La lista ordenada de socios es: "+ ordenar(nombres)+"</p>");
+		document.write("<p>La lista en orden inverso es: "+mostrarArrayInverso(nombresCopy)+"</p>");
+		document.write("</aritcle></section>");
+	</script>
+<body>
+
+</body>
+</html>

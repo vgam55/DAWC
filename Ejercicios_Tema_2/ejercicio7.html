@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Ejercicio 7</title>
+		<script type="text/javascript">
+			var numero=0;
+			var suma=0;
+			numero=prompt("Introduce un número distinto de 9999");
+			numero=parseInt(numero);
+			while (numero!=9999)
+			{
+				suma=suma+numero;
+				numero=prompt("Introduce un número distinto de 9999");
+				numero=parseInt(numero);
+			}
+		</script>
+	</head>
+
+	<body>
+		<script type="text/javascript">
+			document.write("<p>La suma de los números introducidos es "+suma+"</p>");
+		</script>
+	</body>
+</html>

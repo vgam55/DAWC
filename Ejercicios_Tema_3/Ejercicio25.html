@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 25</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Ejercicio25: Usando el objeto String muestra los siguientes datos relativos la cadena de texto “Hola”:-->
+	<h1>Manejando cadenas</h1>
+	<script>
+		var cadena=new String("!Hola!");
+		document.write("La variable cadena contiene "+cadena+"<br>");
+		document.write("Su longitud es de "+cadena.length+" caracteres");
+		var salida="<table><tr><td>Posición</td><td>";
+	</script>
+	 <table border="1">
+	 	<tr>
+	 		<td>Posicion</td>
+		 	<script>			
+			for(var cont=0;cont<cadena.length;cont++)
+			{
+				document.write("<td>"+cont.toString()+"</td>");
+			}
+			</script>
+		</tr>
+		<tr>
+			<td>Contenido</td>
+		 <script>			
+			for(var cont=0;cont<cadena.length;cont++)
+			{
+				document.write("<td>"+cadena[cont]+"</td>");
+			}
+			</script>
+		</tr>
+	</table>
+	<!-- Buscamos las posiciones del caracter indicado y lo mostramos por pantalla -->
+	<script>
+		var pos=cadena.indexOf("!");
+		document.write("<p>La primera posición en la que aparece ! es: "+pos.toString()+"</p>");
+		pos=cadena.lastIndexOf("!");
+		document.write("<p>La ultima posición en la que aparece ! es: "+pos.toString()+"</p>");
+	</script>
+<h1>Hecho...</h1>
+</body>
+</html>

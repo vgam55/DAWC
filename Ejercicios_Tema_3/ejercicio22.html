@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 22 tema 3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Ejercicio22: Calcula el tiempo que ha transcurrido desde el primer día de un año especificado ( 15/6/1990) en: días, horas, minutos y segundos. Por ejemplo:
+
+	Desde el 1/1/1990 hasta el 15/6/1990 han transcurrido: 164 días, 23 horas, 0 minutos, 0 segundos.
+
+	Nota: Debes usar operaciones de división para calcular el tiempo transcurrido en días, horas, minutos y segundos. 
+	El primer día del año correspondiente se debe calcular a partir del día del año especificado ( 15/6/1990).-->
+	<script>
+		var corrector= false;
+
+		var dia=0;
+		var mes=0;
+		var anio= 0;
+		var fechaIn;
+		var fechaCalc;
+		//Conseguimos y verificamos el año
+		do
+	    {
+	    	anio=parseInt(prompt("Introduce el año (aaaa)"));
+	    	if((anio>=0)&&(anio<=2019))
+	    	{
+	    		correcto=true;
+	    	}
+	    }
+	    while(!correcto);
+
+		//Conseguimos y verificamos el mes
+	    correcto=false;
+	    do
+	    {
+	    	mes=parseInt(prompt("Introduce el mes (mm)"));
+	    	if((mes>=0)&&(mes<=12))
+	    	{
+	    		correcto=true;
+	    	}
+	    }
+	    while(!correcto);
+
+	    //Conseguimos y verificamos el día
+	    correcto=false;
+	    do
+	    {
+	    	dia=parseInt(prompt("Introduce el día(dd)"));
+	    	switch (mes)
+	    		{
+	    			case 1:
+	    			case 3:
+	    			case 5:
+	    			case 7:
+	    			case 8:
+	    			case 10:
+	    			case 12:	    				
+	    					if((dia>0) && (dia<=31))
+	    					{
+	    						correcto=true;	    			
+	    					}
+	    					break;
+	    				
+	    			case 2:
+	    				if((dia>0) && (dia<=28))
+	    				{
+	    					correcto=true;
+	    		
+	    				}
+	    				break;
+	    			case 4:
+	    			case 6:
+	    			case 9:
+	    			case 11:
+	    				if ((dia>0)	&& (dia<=30))
+	    				{
+	    					correcto=true;
+	    		
+	    				}
+	    				break;
+	    			default:
+	    					alert("Número de días incorrecto");
+	    					break;
+	    		}
+	    }
+	    while(!correcto);
+	 
+		fechaIn= new Date(mes.toString()+"/"+dia.toString()+"/"+anio.toString());
+		fechaCalc= new Date("1/1/"+fechaIn.getFullYear().toString());
+		
+		var tiempoTot=fechIn.getMilliseconds()-fechaCalc.getMilliseconds();
+		alert(tiempoTot);
+		var sec=tiempoTot/1000;
+		alert(tiempoTot);
+		var min=sec/60;
+		alert(tiempoTot);
+		var horas=min/60;
+		alert(tiempoTot);
+		var dias=horas/24;
+		alert(tiempoTot);
+		document.write("Han transcurrido desde "+fechaIn.toString()+" "+dias.toString()+" dias, "+horas.toString()+" horas, "+min.toString()+" minutos, "+sec.toString()+" segundos.");
+	</script>
+</body>
+</html>

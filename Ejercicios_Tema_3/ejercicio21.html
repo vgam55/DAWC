@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 22 Tema 3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Ejercicio21: A partir de una fecha de nacimiento calcula la edad del usuario en años. No es necesario pedir por pantalla la fecha. Hay que tener en cuenta si el cumpleaños no se ha producido todavía en el año en curso. Calcula también las veces que tu cumpleaños caerá en domingo desde este año al año 2100.
+    “Has nacido el 8/1/1985”
+    “Tienes 31 años”
+-->
+	<script>
+		var fechaNac=new Date("4/3/1970");
+		var anioNac= fechaNac.getFullYear();
+		var mesNac= fechaNac.getMonth();
+		var fecha= new Date();
+		
+		//Calculamos la edad
+		var anioAct= fecha.getFullYear();
+		var mesAct= fecha.getMonth();
+		var edad=anioAct-anioNac;
+		//Si, en el año actual, estamos antes del mes de nacimiento, restamos un año a la edad
+		if(mesAct<mesNac)
+		{
+			edad=edad-1;
+		}
+		else if (fechaNac.getDate()>fecha.getDate())
+		{
+			edad--;
+		}
+		//Calculamos el número de veces que nuestro cumpleaños cae en domingo hasta el 2100
+		var domingos=0;
+	    fecha=new Date("04/03/2018");
+		while(fecha.getFullYear()<=2100)
+		{
+			if(fecha.getDay()==0)
+			{
+				domingos=domingos+1;
+			}
+			fecha.setFullYear(fecha.getFullYear()+1);
+		}
+		document.write("<p>Has nacido el "+fechaNac.toString()+"</p>");
+		document.write("<p>Tienes "+edad+" años</p>");
+		document.write("<p>Tu cumpleaños cae en "+domingos+" Domingos de aquí al 2100");
+	</script>
+</body>
+</html>

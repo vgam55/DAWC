@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 10 Tema 3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Crear un script que muestre un mensaje con la fecha y hora actual pero utilizando el siguiente formato:" Hoy es día 3 de Mayo de 2001 y en estos momentos son las 17:30".-->
+
+	<script>
+		var mes=["Enero", "Febrero", "Marzo","Abril","Mayo","Junio","Julio","Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+		var fecha= new Date();
+		var salida="<p>Hoy es "+fecha.getDay()+"de "+mes[fecha.getMonth()]+"de "+fecha.getFullYear()+" y en estos momentos son las "+fecha.getHours()+":"+fecha.getMinutes()+"</p>"
+		document.write(salida);
+	</script>
+</body>
+</html>

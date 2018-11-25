@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 3 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Crea un programa que me pida el nombre de 5 alumnos y luego me los muestre ordenados alfabéticamente.-->
+	<script>
+		function ordenar(nombres1)
+		{
+			nombres1.sort();
+			return nombres1;
+		}
+		var nombres=new Array();
+		for (var i=0; i<5;i++)
+		{
+			nombres[i]=prompt("Introduce un nombre: ");
+		}
+		nombres=ordenar(nombres);
+		document.write("Los nombres ordenados alfabeticamente son: "+nombres.toString());
+	</script>
+</body>
+</html>

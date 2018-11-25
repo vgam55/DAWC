@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 1 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Haz un programa que pida al usuario el precio e IVA a aplicar de un producto y a partir de una función me calcule el precio final.-->
+	<script>
+		function precioFinal(precio_in, iva_in)
+		{
+			var prec1=precio_in+(precio_in*iva_in)/100;
+			return prec1;
+		}
+		var precio=parseInt(prompt("Introduce el precio:"));
+		var iva=parseInt(prompt("Introduce el iva del producto:"));
+		document.write("<p>El Precio de Venta al Publico es: "+precioFinal(precio,iva)+" </p>");
+	</script>
+</body>
+</html>

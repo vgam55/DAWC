@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercico 15 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Ejercicio15: Define una pequeña función MostrarArray (unArray) que tome como parámetro un array y muestre los valores del array tal y como han sido inicializados, es decir, los strings entre comillas y los números tal cual.
+	Esta función se debe usar para mostrar los cuatro arrays.-->
+	<script>
+	 array1 = new Array("Rojo","Verde","Azul");
+     array2 = new Array("70","9","800");
+     array3 = new Array(50,10,2,300);
+     array4 = new Array("70","8","850",30,10,5,400);
+     function mostrarArray(arrayDat)
+     {
+     	var salida="";
+     	for(var i=0; i<arrayDat.length;i++)
+     	{
+     		salida=salida+" Elemento "+(i+1)+": ";
+     		if(typeof(arrayDat[i])=="number")
+     		{
+     			salida=salida+arrayDat[i]+"<br>";
+     		}
+     		else
+     		{
+     			salida= salida+"\""+arrayDat[i]+"\"";
+     		}
+     		salida=salida+"<br>";
+     	}
+     	return salida;
+     }
+     document.write("<p>Primer array</p>: <br>");
+     document.write(mostrarArray(array1));
+     document.write("<p>Segundo array</p><br>");
+     document.write(mostrarArray(array2));
+     document.write("<p>Tercer array</p><br>");
+     document.write(mostrarArray(array3));
+     document.write("<p>Cuarto array</p><br>");
+     document.write(mostrarArray(array4));
+	</script>
+
+</body>
+</html>

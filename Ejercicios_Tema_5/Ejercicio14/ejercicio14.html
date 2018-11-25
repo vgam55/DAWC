@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!--Haciendo uso del objeto radio  muestra el siguiente formulario. Al pulsar sobre el botón “Enviar” se debe mostrar el valor de las opciones seleccionadas. Los valores seleccionados por defecto son los dos primeros de cada lista. -->
+
+	<form action="" id="formulario1" name="formulario1">
+		<table>
+			<tr>
+				<td>
+					Procesador
+				</td>
+				<td>
+					Sistema Operativo
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<input type="radio" name="procesador" id="procesador" value="Intel">Intel</input>
+					<br>
+					<input type="radio" name="procesador" id="procesador" value="AMD">AMD</input>
+					<br>
+					<input type="radio" name="procesador" id="procesador" value="OTROS">Otros</input>
+				</td>
+				<td>
+					<input type="radio" name="so" id="so" value="UNIX">Unix</input>
+					<br>
+					<input type="radio" name="so" id="so" value="LINUX">Linux</input>
+					<br>
+					<input type="radio" name="so" id="so" value="SOLARIS">Solaris</input>
+				</td>
+			</tr>
+		</table>
+		<input type="submit" id="btnEnviar" value="Enviar">
+		<input type="reset"  id="btnLimpiar" value="Limpiar">
+		<script src="radio.js" type="text/javascript" charset="utf-8" async defer></script>
+	</form>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- 4.	Haz un script que me de la url completa, el directorio y el protocolo utilizado en una página web.-->
+	<script>
+		//Declaración de variable y/o funciones
+		var url;			//Guardamos la url de la pagina
+		var path;			//Guardamos el directorio de la pagina
+		var protocolo;	    //Guardamos el protocolo con el que se accedio a la pagina
+		var salida="<p> ";
+		//Ejecución del script
+		//Buscamos los elementos que tenemos que mostrar
+		url=window.location.href;			 //url
+		path=window.location.pathname;		 //directorio
+		protocolo=window.location.protocol;  //protocolo
+		//Construimos el string que vamos a mostrar por pantalla
+		salida=salida+"URL: "+url+"<br>";
+		salida=salida+"PATH: "+path+"<br>";
+		salida=salida+"Protocolo: "+protocolo+"</p>";
+		document.write(salida);
+	</script>
+</body>
+</html>

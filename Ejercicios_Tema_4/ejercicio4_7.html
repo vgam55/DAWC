@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 7 del Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!--Crear un array para los nombres y otro para las edades. Introducir en el elemento 0 del primer array un nombre y en el elemento 0 del segundo array su edad y así sucesivamente hasta 6 nombres. Crear un enlace que permita mostrar por pantalla cada nombre con su edad  y otro para ver la media de todas las edades. Utilizar una función para calcular la media de las edades. -->
+	<script>
+		var nombres=["yo", "tú", "él", "nosotros", "vosotros","ellos"];
+		var edades=[18, 19, 20, 21, 22, 23, 24];
+		document.write("<p>");
+		function escribirNombreEdad(nombres1, edades1)
+		{
+			for(cont=0;cont<nombres.length;cont++)
+			{
+				document.write(" Nombre: "+nombres1[cont]+" Edad: "+edades1[cont]+" <br>");
+			}
+			document.write("</p>");
+		}
+		function mediaEdad(edades1)
+		{
+			var sumatorio=0;    //Guarda la suma de las edades para luego hacer la media
+			var cont; 			//Guarda el número de elementos final del array-1
+			for(cont=0;cont<edades1.length;cont++)
+			{
+				sumatorio=sumatorio+edades1[cont];
+			}
+			sumatorio=sumatorio/(cont+1);
+			document.write("<p>La media de edad es "+sumatorio+"</p>");
+		}
+	</script>
+	<button type="submit" value="Ejecutar" onclick="escribirNombreEdad(nombres, edades)">Ejecutar</button>
+	<button type="submit" value="Media de edad" onclick="mediaEdad(edades)">Enviar</button>
+	
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 9 del tema 3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!--9.	Hacer un programa que muestre un menú de opciones con las siguientes operaciones posibles:
+a.	1. Redondeo a su inmediato superior de un número
+b.	2. Redondeo a su inmediato inferior de un número
+c.	3. Redondeo al número más cercano
+d.	4. Cálculo del número máximo entre dos dados
+e.	5. Cálculo del número mínimo entre dos dados
+f.	6. Cálculo de un número elevado a otro
+g.	7. Cálculo de la raiz cuadrada de un número
+
+El programa debe pedir una opción de las mostradas y en función de ello pedir los datos necesarios para realizar la operación y mostrar el resultado
+ -->
+	<script>
+	    var num1=0;
+		var num2=0;
+		var menu="Elije una opción: \n"+
+		         "1. Redondeo hacía arriba \n"+
+				 "2. Redondeo hacía abajo.\n"+
+			     "3. Redondeo al número más cercano.\n"+
+			     "4. Calcular el máximo de dos número. \n"+
+			     "5. Cácular el minimo de dos números. \n"+
+			     "6. Calcular ún número elevado a otro.\n"+
+			     "7. Cálcular la raiz cuadrada de un número.";
+		var opcion=parseInt(prompt(menu));
+		
+		switch(opcion)
+		{
+			case 1:
+				    num1=prompt("Introduce un número con decimales:");
+				    num1=parseFloat(num1);
+					document.write("<p>El número más proximo por arriba es "+Math.ceil(num1)+"</p>");
+					break;
+			case 2:
+					num1=parseFloat(prompt("Introduce un número con decimales:"));
+					document.write("<p>El número más proximo por abajo es "+Math.floor(num1)+"</p>");
+					break;
+			case 3:
+					num1=parseFloat(prompt("Introduce un número con decimales:"));
+					document.write("<p>El número más proximo es "+Math.round(num1)+"</p>");
+					break;
+			case 4:
+					num1=parseFloat(prompt("Introduce el primer número:"));
+					num2=parseFloat(prompt("Introduce el segundo número:"));
+					document.write("<p>El número mayor es "+Math.max(num1,num2)+"</p>");
+					break;
+			case 5:
+					num1=parseFloat(prompt("Introduce el primer número:"));
+					num2=parseFloat(prompt("Introduce el segundo número:"));
+					document.write("<p>El número menor es "+Math.min(num1,num2)+"</p>");
+					break;
+			case 6:
+					num1=parseInt(prompt("Introduce el primer número:"));
+					num2=parseInt(prompt("Introduce el segundo número:"));
+					document.write("<p>La potencia del primero elevado al segundo es: "+Math.pow(num1,num2)+"</p>");
+					break;
+			case 7:
+					num1=parseInt(prompt("Introduce un número"));
+					document.write("<p>La raiz cuadrada es: "+Math.sqrt(num1)+"</p>");
+					break;
+		}
+	</script>
+</body>
+</html>

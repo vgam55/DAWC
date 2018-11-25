@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 8 Tema 3</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Hacer un script que pida la dirección de correo electrónico de un usuario y devuelva el nombre del servidor. -->
+	<script>
+		var email=prompt("Introduce un email");
+		var arrobaPos=email.search("@");
+		var servidor=email.substring(arrobaPos+1, email.length);
+		document.write("<p>El servidor es "+servidor+"</p>");
+	</script>
+</body>
+</html>

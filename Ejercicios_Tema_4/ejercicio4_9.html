@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 9 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!--9. En un array bidimensional hemos guardado las cinco palabras más buscadas en Internet de tres países (España, Suiza y Portugal). 
+A partir de la siguiente definición del array :
+
+var palabras_espana = new Array('facebook','tuenti', 'youtube', 'hotmail', 'marca');
+var palabras_suiza = new Array('facebook', 'youtube', 'hotmail', 'google', 'blick');
+var palabras_portugal = new Array('facebook', 'youtube', 'hotmail', 'jogos', 'download');
+var palabras_mas_buscadas = new Array(palabras_espana, palabras_suiza, palabras_portugal);
+
+Obtén la siguiente tabla:
+
+Haz las modificaciones necesarias para que, en lugar de: Estado 0, Estado 1 y Estado 2 aparezcan los nombres de los paises: España, Suiza y Portugal.-->
+<table border="1">
+<script>
+	var palabras_espana = new Array('España','facebook','tuenti', 'youtube', 'hotmail', 'marca');
+	var palabras_suiza = new Array('Suiza','facebook', 'youtube', 'hotmail', 'google', 'blick');
+	var palabras_portugal = new Array('Portugal','facebook', 'youtube', 'hotmail', 'jogos', 'download');
+	var palabras_mas_buscadas = new Array(palabras_espana, palabras_suiza, palabras_portugal);
+
+
+	for(var i=0; i<3; i++)
+	{
+		document.write("<tr><th>"+palabras_mas_buscadas[i][0]+"</th>");
+		for (var j=1; j<=5; j++)
+		{
+			document.write("<td>"+palabras_mas_buscadas[i][j]+"</td>");
+		}
+		document.write("</tr>");
+	}
+
+</script>
+</table>
+
+</body>
+</html>

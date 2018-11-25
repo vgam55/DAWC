@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 14 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Ejercicio14: A partir de la siguiente definición de cuatro arrays:
+
+   array1 = new Array("Rojo","Verde","Azul");
+   array2 = new Array("70","9","800");
+   array3 = new Array(50,10,2,300);
+   array4 = new Array("70","8","850",30,10,5,400);
+   Se muestran los arrays ordenados haciendo uso del método sort que toma como parámetro una función de comparación para ordenar los arrays de números.-->
+   <script>
+   	 array1 = new Array("Rojo","Verde","Azul");
+     array2 = new Array("70","9","800");
+     array3 = new Array(50,10,2,300);
+     array4 = new Array("70","8","850",30,10,5,400);
+    
+    
+     var salida="<p>El array 1 ordenado es: "+array1.sort()+"<br>";
+     salida=salida+"El array 2 ordenado es: "+array2.sort(function(a, b){return a - b})+"<br>";
+     salida=salida+"El array 3 ordenado es: "+array3.sort(function(a, b){return a - b})+"<br>";
+     salida=salida+"El array 4 ordeando es: "+ array4.sort(function(a, b){return a - b})+"</p>";
+     document.write(salida);
+   </script>
+</body>
+</html>

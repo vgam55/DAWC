@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 3 Tema 5</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Haz un programa que simule el lanzamiento de un dado. Habrá un botón, y cuando lo pulsamos saldrá un dado con el número correspondiente.-->
+	<script>
+		function tirarDado()
+		{
+			var valor= (Math.random()*(6-1))+1;
+			valor=Math.round(valor);
+			dado.innerHTML=valor.toString();
+		}
+	</script>
+	<div id="dado" border="1"  style=" width: 100px; height: 100px; text-align: center; border: black solid;"></div>
+	<button onclick="tirarDado()" style="width: 100px;height: 30px;" value="Pincha aquí"/>
+		
+	
+</body>
+</html>

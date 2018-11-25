@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title></title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Calcula los años, meses, días y horas que han transcurrido desde el día en que naciste. 
+		 Calcula los meses, días y horas que faltan para tu próximo cumpleaños. Para ello intenta utilizar los tres métodos definidos anteriormente; tendrás que enviarles algún parámetro  para que funcionen bien.-->
+	<script>
+		var cumple=prompt("Introduce tu fecha de cumpleaños");
+		var dCumple=new Date(cumple);
+		var tiempo=Date.now();
+		var tiempoCumple=dCumple.getTime();
+		var segundos=(tiempo-tiempoCumple)/1000;
+		var minutos=Math.floor(segundos/60);
+		var horas=Math.floor(minutos/60);
+		var dias=Math.floor(horas/24);
+		var mes=Math.floor(dias/30);
+		
+		document.write("<p>Han pasado "+mes.toString()+" meses "+dias.toString()+" días y "+horas.toString()+" horas desde que nacistes.</p>");
+	</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 18 del Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!--Ejercicio18: Usando la propiedad prototype de los objetos Array, define un nuevo método para el objeto Array de nombre max que permita incorporar la       función de calcular el máximo de un array.
+		Prueba el nuevo método con un ejemplo sencillo.-->
+	<script>
+		Array.prototype.Max=function()
+		{
+			var max=parseInt(this[0]);
+			for(var i=1; i<this.length;i++)
+			{
+				if(max<this[i])
+				{
+					max=parseInt(this[i]);
+				}
+			}
+			return max;
+		};
+		
+		array2 = new Array("70","9","800");
+     	array3 = new Array(50,10,2,300);
+     	array4 = new Array("70","8","850",30,10,5,400);
+     	
+     	document.write("<p>El máximo del array 2 es: "+array2.Max()+"</p>");
+     	document.write("<p>El máximo del array 3 es: "+array3.Max()+"</p>");
+     	document.write("<p>El máximo del array 4 es: "+array4.Max()+"</p>");
+	</script>
+</body>
+</html>

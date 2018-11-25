@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio 2 Tema 4</title>
+	<link rel="stylesheet" href="">
+</head>
+<body>
+	<!-- Haz un programa que pida un número al usuario y usando una función me diga si es par o impar.-->
+	<script>
+	  function numPar(numero)
+	  {
+	  	var par=false;
+	  	if((numero%2)==0)
+	  	{
+	  		par=true;
+	  	}
+	  	return par;
+	  }
+
+	  var num=parseInt(prompt("Introduce un número, por favor: "));
+	  if(numPar(num))
+	  {
+	  	document.write("<p>El número "+num+ " es par</p>");
+	  }	
+	  else
+	  {
+	  	document.write("<p>El número "+num+ " es impar</p>");
+	  }
+	</script>
+</body>
+</html>

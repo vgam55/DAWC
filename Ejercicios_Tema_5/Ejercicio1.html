@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Ejercicio del 1 Tema 5</title>
+	<link rel="stylesheet" href="">
+	<script>
+	 	function cambiaColor(elemento)
+	 	{
+	 	 document.body.style.backgroundColor= elemento;
+	    }
+
+	    function cambiarBlanco()
+	    {
+	    	document.body.style.backgroundColor= "white";
+	    }
+	</script>
+</head>
+<body>
+	<!-- Haz una página que muestre cinco cuadrados de colores diferentes. Al pasar por encima de ellos, cambiará el color del fondo de la página con el color del cuadrado, cuando salgo del cuadrado volveré al color de fondo original. -->
+	<div id="uno" style="background-color: lightblue; width: 50px; height: 
+	50px; margin:5px;" onmouseover="cambiaColor('lightblue')" onmouseout="cambiaColor('white')"></div>
+	<div id="dos" style="background-color: lightgreen; width: 50px; height: 50px; margin:5px;" onmouseover="cambiaColor('lightgreen')" onmouseout="cambiaColor('white')"></div>
+	<div id="tres" style="background-color: pink; width: 50px; height: 50px; margin:5px;" onmouseover="cambiaColor('pink')" onmouseout="cambiaColor('white')"></div>
+	<div id="cuatro" style="background-color: yellow; width: 50px; height: 50px;margin:5px;" onmouseover="cambiaColor('yellow')" onmouseout="cambiaColor('white')"></div>
+	<div id="cinco" style="background-color: brown; width: 50px; height: 50px;margin:5px;" onmouseover="cambiaColor('brown')" onmouseout="cambiaColor('white')"></div>
+</body>
+</html>
